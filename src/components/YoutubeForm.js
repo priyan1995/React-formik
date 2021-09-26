@@ -9,15 +9,18 @@ export const YoutubeForm = () => {
             name: '',
             email: '',
             channel: ''
+        },
+        onSubmit: values => {
+            console.log('Submitted', values)
         }
     })
 
-    console.log('Values: ', youtubeForm.values);
+    // console.log('Values: ', youtubeForm.values);
 
     return (
         <div>
 
-            <form>
+            <form onSubmit={youtubeForm.handleSubmit}>
 
                 <label htmlFor="name">Name</label>
                 <input 
