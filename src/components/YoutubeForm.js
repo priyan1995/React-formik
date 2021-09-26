@@ -50,7 +50,8 @@ export const YoutubeForm = () => {
 
                 />
 
-                <button>Submit</button>
+                <button type="submit">Submit</button>
+                {/* to avoid warning please define button type as 'submit' */}
 
             </form>
         </div>
