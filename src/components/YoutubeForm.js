@@ -44,8 +44,8 @@ export const YoutubeForm = () => {
     })
 
     // console.log('Values: ', youtubeForm.values);
-   // console.log('Errors', youtubeForm.errors);
-  // console.log('Visited Fields', youtubeForm.touched)
+    // console.log('Errors', youtubeForm.errors);
+    // console.log('Visited Fields', youtubeForm.touched)
 
     return (
         <div>
@@ -62,7 +62,7 @@ export const YoutubeForm = () => {
                         onChange={youtubeForm.handleChange}
                         value={youtubeForm.values.name}
                     />
-                    {youtubeForm.errors.name ? <div className="error">{youtubeForm.errors.name}</div> : null}
+                    {youtubeForm.touched.name && youtubeForm.errors.name ? <div className="error">{youtubeForm.errors.name}</div> : null}
                 </div>
 
 
@@ -76,7 +76,7 @@ export const YoutubeForm = () => {
                         onChange={youtubeForm.handleChange}
                         value={youtubeForm.values.email}
                     />
-                    {youtubeForm.errors.email ? <div className="error">{youtubeForm.errors.name}</div> : null}
+                    {youtubeForm.touched.email && youtubeForm.errors.email ? <div className="error">{youtubeForm.errors.name}</div> : null}
                 </div>
 
 
@@ -90,7 +90,7 @@ export const YoutubeForm = () => {
                         onChange={youtubeForm.handleChange}
                         value={youtubeForm.values.channel}
                     />
-                    {youtubeForm.errors.channel ? <div className="error">{youtubeForm.errors.channel}</div> : null}
+                    {youtubeForm.touched.channel && youtubeForm.errors.channel ? <div className="error">{youtubeForm.errors.channel}</div> : null}
                 </div>
 
                 <button type="submit">Submit</button>
