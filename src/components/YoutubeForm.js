@@ -45,6 +45,7 @@ export const YoutubeForm = () => {
 
     // console.log('Values: ', youtubeForm.values);
    // console.log('Errors', youtubeForm.errors);
+  // console.log('Visited Fields', youtubeForm.touched)
 
     return (
         <div>
@@ -57,6 +58,7 @@ export const YoutubeForm = () => {
                         type="text"
                         id="name"
                         name="name"
+                        onBlur={youtubeForm.handleBlur}
                         onChange={youtubeForm.handleChange}
                         value={youtubeForm.values.name}
                     />
@@ -70,6 +72,7 @@ export const YoutubeForm = () => {
                         type="email"
                         id="email"
                         name="email"
+                        onBlur={youtubeForm.handleBlur}
                         onChange={youtubeForm.handleChange}
                         value={youtubeForm.values.email}
                     />
@@ -83,6 +86,7 @@ export const YoutubeForm = () => {
                         type="text"
                         id="channel"
                         name="channel"
+                        onBlur={youtubeForm.handleBlur}
                         onChange={youtubeForm.handleChange}
                         value={youtubeForm.values.channel}
                     />
