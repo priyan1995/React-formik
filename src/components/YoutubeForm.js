@@ -4,15 +4,43 @@ import { useFormik } from "formik";
 
 export const YoutubeForm = () => {
 
-    const youtubeForm = useFormik({
-        initialValues: {
+
+    const initialValues = {       
             name: '',
             email: '',
-            channel: ''
-        },
-        onSubmit: values => {
-            console.log('Submitted', values)
+            channel: ''       
+    }
+    
+    const onSubmit = values => {
+        console.log('Submitted', values)
+    }
+
+    const validate = values => {
+        let errors = {}
+
+        if(!values.name){
+            errors.name = 'Required'
         }
+
+        if(!values.email){
+            errors.email = 'Required'
+        }else if(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(values.email)){
+            errors.email = 'Invalid Email Format'
+        }
+
+        if(!values.channel){
+            errors.channel = 'Required'
+        }
+
+
+
+        return errors
+    }
+
+    const youtubeForm = useFormik({
+        initialValues,
+        onSubmit,
+        validate
     })
 
     // console.log('Values: ', youtubeForm.values);
