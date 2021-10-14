@@ -18,7 +18,7 @@ function App() {
             <YoutubeForm />
           </Route>
 
-          <Route path="formik-form">
+          <Route path="/formik-form">
             <FormikContainer />
           </Route>
 
