@@ -45,3 +45,13 @@ select{
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+
+.d-flex label{
+  margin-right: 5px;
+  margin-top: 5px;
+}
