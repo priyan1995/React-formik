@@ -34,8 +34,9 @@ export const BirthDay = (props) => {
                     } }
 
                 </Field>
+                <ErrorMessage name={name} component={TextError} />
             </div>
-            <ErrorMessage name={name} component={TextError} />
+           
 
         </>
     )
